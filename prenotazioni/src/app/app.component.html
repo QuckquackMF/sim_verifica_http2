@@ -9,16 +9,17 @@
 
   <body>
     <div>
-      Nome: <input type="text"><br />
-      Cognome: <input type="text"><br />
-      Indirizzo: <input type="text"><br />
-      Telefono: <input type="number"><br />
-      Email: <input type="text"><br />
-      Data prenotazione: <input type="date"><br />
-      Ora prenotazione: <input type="number"><br />
+      Nome: <input type="text" #nome><br />
+      Cognome: <input type="text" #cognome><br />
+      Indirizzo: <input type="text" #indirizzo><br />
+      Telefono: <input type="number" #telefono><br />
+      Email: <input type="text" #email><br />
+      Data prenotazione: <input type="date" #data><br />
+      Ora prenotazione: <input type="number" #ora><br />
     </div>
+    
     <div>
-      
+      <button (click) = "aggiungiDati(nome, cognome, indirizzo, telefono, email, data, ora)">Prenota</button>
     </div>
 
     <div>
