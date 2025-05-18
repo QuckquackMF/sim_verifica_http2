@@ -17,3 +17,4 @@ export class Profili {
         this.ora = ora
     }
 }
+

@@ -14,6 +14,7 @@ import { ListaPrenotazioniComponent } from './lista-prenotazioni/lista-prenotazi
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
+  fam!: Observable<Profili[]>
   profile!: Profili[];
   nuovidati!: Profili;
   data!: Object;
@@ -24,7 +25,6 @@ export class AppComponent implements OnInit {
 
   aggiungiDati(nome:HTMLInputElement, cognome: HTMLInputElement, indirizzo: HTMLInputElement, telefono: HTMLInputElement, email: HTMLInputElement, data: HTMLInputElement, ora: HTMLInputElement) {
     const dataValue = new Date(data.value);
-    
     this.nuovidati = new Profili(nome.value, cognome.value, indirizzo.value, parseInt(telefono.value), email.value, dataValue, parseFloat(ora.value))
   }
 
@@ -41,8 +41,14 @@ export class AppComponent implements OnInit {
     console.log(this.data);
   }
 
+  makeTypedRequest() {
+    this.fam = this.http.get<Profili[]>('https://my-json-server.typicode.com/malizia-g/verificaPrenotazioni/prenotazioni')
+    this.fam.subscribe(data => {this.profile = data;});
+  }
+
   ngOnInit() {
     this.makeRequest()
+    this.makeTypedRequest()
   }
 }
 

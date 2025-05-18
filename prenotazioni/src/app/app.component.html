@@ -9,13 +9,13 @@
 
   <body>
     <div>
-      Nome: <input type="text" #nome><br />
-      Cognome: <input type="text" #cognome><br />
-      Indirizzo: <input type="text" #indirizzo><br />
-      Telefono: <input type="number" #telefono><br />
-      Email: <input type="text" #email><br />
-      Data prenotazione: <input type="date" #data><br />
-      Ora prenotazione: <input type="number" #ora><br />
+      Nome: <input name="nome" type="text" #nome><br />
+      Cognome: <input name="cognome" type="text" #cognome><br />
+      Indirizzo: <input name="indirizzo" type="text" #indirizzo><br />
+      Telefono: <input name="telefono" type="number" #telefono><br />
+      Email: <input name="email" type="text" #email><br />
+      Data prenotazione: <input name="data" type="date" #data><br />
+      Ora prenotazione: <input name="ora" type="number" #ora><br />
     </div>
     
     <div>
@@ -32,6 +32,7 @@
     <div>
       Lista prenotazioni
       <div>
+        <app-lista-prenotazioni [profile]="profile"></app-lista-prenotazioni>
         <app-lista-prenotazioni></app-lista-prenotazioni>
       </div>
     </div>
