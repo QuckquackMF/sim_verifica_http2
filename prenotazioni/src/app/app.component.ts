@@ -5,11 +5,12 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { JsonPipe } from '@angular/common';
 import { ListaPrenotazioniComponent } from './lista-prenotazioni/lista-prenotazioni.component';
+import { DettagliComponenteComponent } from './dettagli-componente/dettagli-componente.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, JsonPipe, ListaPrenotazioniComponent],
+  imports: [RouterOutlet, JsonPipe, ListaPrenotazioniComponent, DettagliComponenteComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

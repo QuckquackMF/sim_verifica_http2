@@ -1,3 +1,9 @@
 @for (art of profile; track art) {
-    {{ art.data | date:'yyyy-MM-dd' }} - {{ art.ora }} -> {{ art.nome }} {{ art.cognome }}<br />
+    <div (click)="showDetails(art)" class="py-1" style="cursor: pointer;">
+        {{ art.data | date:'yyyy-MM-dd' }} - {{ art.ora }} -> {{ art.nome }} {{ art.cognome }}<br />
+    </div>
+}
+
+@if (selectedProfile) {
+    <app-dettagli-componente [selectedProfile]="selectedProfile"></app-dettagli-componente>
 }

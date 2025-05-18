@@ -1,0 +1,5 @@
+@if (selectedProfile) {
+      {{ selectedProfile.data | date:'yyyy-MM-dd' }} - {{ selectedProfile.ora }} -> {{ selectedProfile.nome }} {{ selectedProfile.cognome }}<br>
+      {{ selectedProfile.indirizzo }}<br>
+      TEL: {{ selectedProfile.telefono }} - {{ selectedProfile.email }}
+  }
