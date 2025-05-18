@@ -18,3 +18,7 @@ export class Profili {
     }
 }
 
+export interface Response
+{
+    id :number
+}
